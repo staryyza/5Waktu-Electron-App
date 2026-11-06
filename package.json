@@ -1,15 +1,37 @@
 {
   "name": "prayer-time-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "SolatTime Prayer Application",
   "main": "main.js",
+
   "scripts": {
-  "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
+
   "keywords": [],
-  "author": "",
+  "author": "Azyyati Aqilah",
   "license": "ISC",
+
   "dependencies": {
     "electron": "^45.2.3"
+  },
+
+  "devDependencies": {
+    "electron-builder": "^26.18.0"
+  },
+
+  "build": {
+    "appId": "com.staryyza.5waktu",
+    "productName": "5Waktu",
+
+    "files": [
+      "**/*",
+      "!node_modules/.cache/**/*"
+    ],
+
+    "win": {
+      "target": "nsis"
+    }
   }
 }
