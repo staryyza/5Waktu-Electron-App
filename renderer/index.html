@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5Waktu App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>5Waktu</h2>
+    <a href="reminder.html">Activity Reminders</a>
+</nav>
+
+<div class="dashboard">
+
+    <div class="header">
+
+        <div>
+            <h1 id="locationTitle">
+                Prayer Times in Kuala Lumpur, Malaysia
+            </h1>
+
+            <p id="todayDate">
+                Loading date...
+            </p>
+        </div>
+
+        <div>
+            <select id="zone">
+
+                <!-- Wilayah Persekutuan -->
+                <option value="WLY01">Kuala Lumpur & Putrajaya</option>
+                <option value="WLY02">Labuan</option>
+
+                <!-- Johor -->
+                <option value="JHR01">Pulau Aur & Pulau Pemanggil</option>
+                <option value="JHR02">Johor Bahru, Kota Tinggi, Mersing</option>
+                <option value="JHR03">Kluang, Pontian</option>
+                <option value="JHR04">Batu Pahat, Muar, Segamat</option>
+
+                <!-- Kedah -->
+                <option value="KDH01">Kota Setar, Kubang Pasu</option>
+                <option value="KDH02">Pendang, Kuala Muda</option>
+                <option value="KDH03">Padang Terap, Sik</option>
+                <option value="KDH04">Baling</option>
+                <option value="KDH05">Kulim, Bandar Baharu</option>
+                <option value="KDH06">Langkawi</option>
+
+                <!-- Kelantan -->
+                <option value="KTN01">Kota Bharu, Bachok, Pasir Puteh</option>
+                <option value="KTN02">Pasir Mas, Tumpat</option>
+                <option value="KTN03">Jeli, Tanah Merah</option>
+
+                <!-- Melaka -->
+                <option value="MLK01">Seluruh Melaka</option>
+
+                <!-- Negeri Sembilan -->
+                <option value="NGS01">Jelebu, Jempol</option>
+                <option value="NGS02">Port Dickson, Seremban</option>
+
+                <!-- Pahang -->
+                <option value="PHG01">Pulau Tioman</option>
+                <option value="PHG02">Kuantan, Pekan, Rompin</option>
+                <option value="PHG03">Jerantut, Temerloh</option>
+                <option value="PHG04">Bentong, Raub</option>
+
+                <!-- Perak -->
+                <option value="PRK01">Tapah, Slim River</option>
+                <option value="PRK02">Kuala Kangsar, Sg Siput</option>
+                <option value="PRK03">Lenggong, Gerik</option>
+                <option value="PRK04">Kampar, Kinta</option>
+                <option value="PRK05">Teluk Intan, Bagan Datuk</option>
+
+                <!-- Perlis -->
+                <option value="PLS01">Seluruh Perlis</option>
+
+                <!-- Pulau Pinang -->
+                <option value="PNG01">Pulau Pinang</option>
+
+                <!-- Sabah -->
+                <option value="SBH01">Sandakan</option>
+                <option value="SBH02">Ranau, Kota Belud</option>
+                <option value="SBH03">Kudat</option>
+                <option value="SBH04">Tawau</option>
+                <option value="SBH05">Beaufort, Sipitang</option>
+                <option value="SBH06">Kota Kinabalu</option>
+
+                <!-- Sarawak -->
+                <option value="SWK01">Limbang, Lawas</option>
+                <option value="SWK02">Miri</option>
+                <option value="SWK03">Bintulu</option>
+                <option value="SWK04">Sibu</option>
+                <option value="SWK05">Sarikei</option>
+                <option value="SWK06">Sri Aman</option>
+                <option value="SWK07">Betong</option>
+                <option value="SWK08">Kuching</option>
+
+                <!-- Selangor -->
+                <option value="SGR01">Gombak, Hulu Langat, Kajang</option>
+                <option value="SGR02">Kuala Selangor, Sabak Bernam</option>
+                <option value="SGR03">Klang, Kuala Langat</option>
+
+                <!-- Terengganu -->
+                <option value="TRG01">Kuala Terengganu, Marang</option>
+                <option value="TRG02">Besut, Setiu</option>
+                <option value="TRG03">Dungun, Kemaman</option>
+
+            </select>
+
+            <button id="fetchBtn">
+                Change Location
+            </button>
+        </div>
+
+    </div>
+
+    <div id="message"></div>
+
+    <div class="prayer-grid">
+
+        <div class="prayer-card">
+            <h3>Subuh</h3>
+            <p id="fajr">--:--</p>
+        </div>
+
+        <div class="prayer-card">
+            <h3>Zuhur</h3>
+            <p id="dhuhr">--:--</p>
+        </div>
+
+        <div class="prayer-card">
+            <h3>Asar</h3>
+            <p id="asr">--:--</p>
+        </div>
+
+        <div class="prayer-card">
+            <h3>Maghrib</h3>
+            <p id="maghrib">--:--</p>
+        </div>
+
+        <div class="prayer-card">
+            <h3>Isyak</h3>
+            <p id="isha">--:--</p>
+        </div>
+
+        <div class="current-prayer">
+
+            <span class="badge">NOW</span>
+
+            <h2 id="nextPrayer">
+                --
+            </h2>
+
+            <p id="nextPrayerTime">
+                --:--
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="bottom-section">
+
+        <div class="info-card">
+
+            <h3>Time till next prayer</h3>
+
+            <p>
+                Current Time:
+                <span id="currentTime"></span>
+            </p>
+
+            <p>
+                Time Remaining:
+                <span id="remaining"></span>
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <h3>Suggested Activity</h3>
+
+            <p id="suggestion">
+                No suggestion yet.
+            </p>
+
+            <button id="saveSuggestion">
+                Save Suggestion
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>

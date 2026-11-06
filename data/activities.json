@@ -1,0 +1,22 @@
+[
+  {
+    "prayer": "Fajr",
+    "activity": "Prepare for Subuh prayer and recite morning dhikr."
+  },
+  {
+    "prayer": "Dhuhr",
+    "activity": "Read Quran after completing Zuhur prayer."
+  },
+  {
+    "prayer": "Asr",
+    "activity": "Perform Asar prayer and make dua."
+  },
+  {
+    "prayer": "Maghrib",
+    "activity": "Spend time with family and attend religious activities."
+  },
+  {
+    "prayer": "Isha",
+    "activity": "Read Surah Al-Mulk before sleeping."
+  }
+]

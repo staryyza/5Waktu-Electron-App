@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hijrah Activity Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>5Waktu</h2>
+
+    <div>
+        <a href="index.html">Prayer Dashboard</a>
+    </div>
+</nav>
+
+<div class="planner-container">
+
+    <div class="planner-header">
+
+        <h1>Hijrah Activity Planner</h1>
+
+        <div class="hijri-card">
+            <h3>Today's Hijrah Date</h3>
+
+            <p id="hijriDate">
+                Loading...
+            </p>
+        </div>
+
+    </div>
+
+    <div class="calendar-container">
+
+        <div class="calendar-header">
+
+            <button id="prevMonth">&lt;</button>
+
+            <h2 id="calendarTitle">
+                Hijri Calendar
+            </h2>
+
+            <button id="nextMonth">&gt;</button>
+
+        </div>
+
+        <div class="calendar-days">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+        <div id="calendarGrid"
+            class="calendar-grid">
+        </div>
+
+    </div>
+
+    <div class="activity-form">
+
+        <h2>Add Activity</h2>
+
+        <input
+            type="text"
+            id="activityTitle"
+            placeholder="Activity Title">
+
+        <input
+            type="time"
+            id="activityTime">
+
+        <textarea
+            id="activityNote"
+            placeholder="Activity Notes"></textarea>
+
+        <button id="saveBtn">
+            Save Activity
+        </button>
+
+        <p id="feedback"></p>
+
+    </div>
+
+    <div class="activities-section">
+
+        <h2>Saved Activities</h2>
+
+        <div id="activityList"></div>
+
+    </div>
+
+</div>
+
+<script src="reminder.js"></script>
+
+</body>
+</html>
